@@ -17,12 +17,16 @@ In this model we train a decision tree to determine if patients are diabetic or 
 
 We tune the hyperparameters: maximum depth (max\_depth), minimum node size (min\_samples\_split), gain in error reduction. 
 
+Lastly, we report the validation and training error. 
+
 ### Model 2: A random forest
+
+In this model we train a random forest to determine if patients are diabetic or not. 
 
 We use the optimal hyperparameters from Model 1 to define the trees.
 
-We tune the hyperparameter ``n_estimators'', i.e., the number of trees. 
+We tune the hyperparameter `n_estimators', i.e., the number of trees. 
 
-
+Lastly, we report the validation and training error. 
 
 %--------------------------------------- Required Packages -----------------------------------------%
