@@ -15,7 +15,7 @@ We use 5-fold cross validation to tune hyperparameters, e.g., by using a 70/30 t
 
 In this model we train a decision tree to determine if patients are diabetic or not. 
 
-We tune the hyperparameters: maximum depth (max\_depth), minimum node size (min\_samples\_split), gain in error reduction. 
+We tune the hyperparameters: maximum depth (max\_depth) AND minimum node size (min\_samples\_split), in order to gain in error reduction. 
 
 Lastly, we report the validation and training error. 
 
@@ -61,7 +61,7 @@ These hyperparameters are then used in Model 2: Random Forest.
 <img src="./Figure1.png" alt="DecisionTreeHyperparams" width="600"/>
 
 ### Model 2: Random Forest
-For this model we use 4-layer trees with minimum node size 15 and we would like to determine the optimal number of trees per forest, denoted by $n$. To determine the best $n$, we again perform 5-fold cross-validation. This process trains 5 random forests, each with $n$ trees, and then averages the 5 errors. This repeats for $n$ to take on any value from 2 to 250. The generated error plot for all values of $n$ is shown in Figure 2. The gain in error reduction for this hyperparameter occurs at 137, so if we were to deploy our Random Forest model we would want to set
+For this model we use 4-layer trees with minimum node size 15 and we would like to determine the optimal number of trees per forest, denoted by $number\\_of\\_trees$. To determine the best $number\\_of\\_trees$, we again perform 5-fold cross-validation. This process trains 5 random forests, each with $number\\_of\\_trees$ trees, and then averages the 5 errors. This repeats for $number\\_of\\_trees$ to take on any value from 2 to 250. The generated error plot for all values of $number\\_of\\_trees$ is shown in Figure 2. The gain in error reduction for this hyperparameter occurs at 137, so if we were to deploy our Random Forest model we would want to set
 $$(node\\_size, max\\_depth, number\\_of\\_trees) = (15, 4, 137).$$
 
 <img src="./Figure2.png" alt="RandomForestHyperparams" width="400"/>
