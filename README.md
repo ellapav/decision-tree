@@ -58,6 +58,10 @@ After looking at all the depth and node combinations, we plot the errors on Figu
 $$ (node\_size, max\_depth) = (15, 4). $$
 These hyperparameters are then used in Model 2: Random Forest.
 
+<img src="./Figure1.png" alt="DecisionTreeHyperparams" width="300"/>
+
 ### Model 2: Random Forest
 For this model we use 4-layer trees with minimum node size 15 and we would like to determine the optimal number of trees per forest, denoted by $n$. To determine the best $ n $, we again perform 5-fold cross-validation. This process trains 5 random forests, each with $ n $ trees, and then averages the 5 errors. This repeats for $ n $ to take on any value from 2 to 250. The generated error plot for all values of $n$ is shown in Figure 2. The gain in error reduction for this hyperparameter occurs at 137, so if we were to deploy our Random Forest model we would want to set
 $$ (node\_size, max\_depth, numer\_of\_trees) = (15, 4, 137) .$$
+
+<img src="./Figure2.png" alt="RandomForestHyperparams" width="300"/>
