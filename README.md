@@ -2,10 +2,11 @@
 
 %--------------------------------------- Data -----------------------------------------%
 
-The Pima Indian Diabetes dataset found Pima-Data-Adjusted.mat is from the UC Irvine Machine Learning Database at https://archive.ics.uci.edu/ml/datasets.php. 
-The first 8 columns are the features and the last column represents the class label ( diabetes = , not diabetic= ). 
+The Pima Indian Diabetes dataset found in Pima-Data-Adjusted.mat is from the UC Irvine Machine Learning Database at https://archive.ics.uci.edu/ml/datasets.php. (Update 2023: dataset can now be found at https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database).
+The first 8 columns are the features and the last column represents the class label (1 or 0). 
 
-Note that we adjusted the data from the database to remove entries with missing data, and these data have been normalized. 
+Update 2023:
+Note that the _original data_ from UC Irvine removed entries with missing data and then normalized the data. The Kaggle data contains missing values and is not normalized.
 
 %--------------------------------------- Goal for Project -----------------------------------------%
 
